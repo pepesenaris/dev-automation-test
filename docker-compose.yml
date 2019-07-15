@@ -4,10 +4,17 @@ services:
         image: jenkins/jenkins:lts
         ports:
             - '127.0.0.1:8080:8080'
+        networks:
+            default:
+                aliases:
+                    - jenkins.localhost
     db:
         image: mysql:5.7
         environment:
             MYSQL_ROOT_PASSWORD: 'mHsJ33lF+1FZ'
         ports:
             - '127.0.0.1:3306:3306'
+
+networks: 
+    default:
 
