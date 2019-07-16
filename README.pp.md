@@ -42,5 +42,13 @@ index 200e12e..44c34b7 100644
 +                                                      
 ```
 
+Added a `named` volume to persist the changes to the data.
+
+A handy way to run a manual backup of the data:
+
+```
+$ docker run --rm --volumes-from  dev-automation-test_jenkins_1_41f12198fbcd -v $(pwd):/backup ubuntu tar cvf  /backup/backup.tar /var/jenkins_home
+```
+
 #### task 2
 

@@ -4,6 +4,8 @@ services:
         image: jenkins/jenkins:lts
         ports:
             - '127.0.0.1:8080:8080'
+        volumes:
+            - 'jenkins_home:/var/jenkins_home'
         networks:
             default:
                 aliases:
@@ -17,4 +19,7 @@ services:
 
 networks: 
     default:
+
+volumes:
+    jenkins_home: ~
 
