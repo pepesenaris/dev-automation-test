@@ -61,3 +61,5 @@ Found a good tutorial, for newbies :-), on how to remove docker images and conta
 
 https://www.digitalocean.com/community/tutorials/how-to-remove-docker-images-containers-and-volumes
 
+------- Actually, let's go back to debian.
+
