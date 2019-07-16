@@ -52,3 +52,12 @@ $ docker run --rm --volumes-from  dev-automation-test_jenkins_1_41f12198fbcd -v 
 
 #### task 2
 
+Changed to `jenkins/jenkins:lts-alpine` docker image. This one has a smaller size, plus I found an example
+of how to install python 3 that was using it :-)
+
+https://github.com/manycoding/jenkins-python/blob/master/Dockerfile
+
+Found a good tutorial, for newbies :-), on how to remove docker images and containers:
+
+https://www.digitalocean.com/community/tutorials/how-to-remove-docker-images-containers-and-volumes
+
