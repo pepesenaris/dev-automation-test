@@ -63,3 +63,16 @@ https://www.digitalocean.com/community/tutorials/how-to-remove-docker-images-con
 
 ------- Actually, let's go back to debian.
 
+
+#### task 3
+
+When using `docker cp` the file is created with the user:group of the host container, which may be a cause of permission errors down the road.
+
+There's a way of copying file and setting permissions at the same time. By using `tar`, 
+
+```
+tar -cf - database.sql --mode u=+rw,g=+rw,o=+rw --owner root --group root | docker cp - dev-automation-test_jenkins_1_8f4a0856e7bc:/home
+```
+
+we can copy `database.sql` file to the container `dev-automation-test_jenkins_1_8f4a0856e7bc` `/home` folder.
+
