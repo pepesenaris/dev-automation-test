@@ -7,7 +7,7 @@ services:
         image: test-jenkins
         # But we can also use an image built locally... yeah!!! 
         ports:
-            - '127.0.0.1:8080:8080'
+            - '127.0.0.1:9090:8080'
         volumes:
             - 'jenkins_home:/var/jenkins_home'
             - ./test_files:/data
